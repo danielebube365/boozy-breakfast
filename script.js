@@ -33,6 +33,14 @@
     });
   });
 
+  /* menu tabs */
+  const tabs = $$('.tab'), panels = $$('.tabpanel');
+  tabs.forEach((t) => t.addEventListener('click', () => {
+    const id = t.dataset.tab;
+    tabs.forEach((x) => { const on = x === t; x.classList.toggle('is-active', on); x.setAttribute('aria-selected', String(on)); });
+    panels.forEach((p) => { const on = p.dataset.panel === id; p.classList.toggle('is-active', on); p.hidden = !on; });
+  }));
+
   /* reveal */
   const reveals = new Set($$('.reveal'));
   const show = (el) => { el.classList.add('in'); reveals.delete(el); };

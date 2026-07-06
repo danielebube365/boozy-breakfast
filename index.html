@@ -92,11 +92,17 @@
       <p>Every dish comes with orange juice or a screwdriver. Prices in naira.</p>
     </div>
 
-    <div class="menu__wrap">
-      <!-- food -->
-      <div class="mcol reveal">
-        <h3>Boozy Breakfast</h3>
-        <div class="mgrid mgrid--1">
+    <div class="tabs reveal" role="tablist" aria-label="Menu categories">
+      <button class="tab is-active" role="tab" aria-selected="true" data-tab="breakfast">Breakfast</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="addons">Add-ons</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="cocktails">Cocktails</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="nonboozy">Non-Boozy</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="bottles">Bottles &amp; Extras</button>
+    </div>
+
+    <div class="tabpanels reveal" style="--d:.06s">
+      <div class="tabpanel is-active" data-panel="breakfast" role="tabpanel">
+        <div class="mgrid">
           <div class="mrow"><span class="mrow__name">Oyinbo<small>Waffles, pancakes, French toast, eggs, bacon, sausage &amp; baked beans</small></span><b class="mrow__price">₦18,500</b></div>
           <div class="mrow"><span class="mrow__name">Hangover 🌶<small>Spicy fragrant noodles, suya, sausages, sunny-side-up egg</small></span><b class="mrow__price">₦10,500</b></div>
           <div class="mrow"><span class="mrow__name">Naija Vibes<small>Agege bread, akara, pap &amp; boiled eggs</small></span><b class="mrow__price">₦11,500</b></div>
@@ -114,8 +120,9 @@
           <div class="mrow"><span class="mrow__name">Morning Brew Toast<small>Golden French toast infused with coffee, side of maple syrup</small></span><b class="mrow__price">₦8,500</b></div>
           <div class="mrow"><span class="mrow__name">Chocolate Pancake Stack<small>Fluffy pancakes layered with hazelnut chocolate spread</small></span><b class="mrow__price">₦9,500</b></div>
         </div>
+      </div>
 
-        <h3 class="mt">Add Ons</h3>
+      <div class="tabpanel" data-panel="addons" role="tabpanel" hidden>
         <div class="mgrid">
           <div class="mrow"><span class="mrow__name">Spicy Buttermilk Chicken</span><b class="mrow__price">₦10,000</b></div>
           <div class="mrow"><span class="mrow__name">Buttermilk Chicken</span><b class="mrow__price">₦10,000</b></div>
@@ -130,10 +137,8 @@
         </div>
       </div>
 
-      <!-- bar -->
-      <div class="mcol reveal" style="--d:.1s">
-        <h3>Boozy Bar</h3>
-        <div class="mgrid mgrid--1">
+      <div class="tabpanel" data-panel="cocktails" role="tabpanel" hidden>
+        <div class="mgrid">
           <div class="mrow"><span class="mrow__name">Ginger Cinnamon Whiskey Sour</span><b class="mrow__price">₦10,000</b></div>
           <div class="mrow"><span class="mrow__name">Spicy Mango Margarita</span><b class="mrow__price">₦12,000</b></div>
           <div class="mrow"><span class="mrow__name">Cherry Espresso Martini</span><b class="mrow__price">₦12,000</b></div>
@@ -144,8 +149,9 @@
           <div class="mrow"><span class="mrow__name">Aperol Spritz</span><b class="mrow__price">₦10,000</b></div>
           <div class="mrow"><span class="mrow__name">Beer<small>Desperados, Heineken, Star Radler</small></span><b class="mrow__price">₦5,500</b></div>
         </div>
+      </div>
 
-        <h3 class="mt">Non-Boozy</h3>
+      <div class="tabpanel" data-panel="nonboozy" role="tabpanel" hidden>
         <div class="mgrid">
           <div class="mrow"><span class="mrow__name">Tangy Straw Monkey</span><b class="mrow__price">₦8,500</b></div>
           <div class="mrow"><span class="mrow__name">Hibiscus Cooler</span><b class="mrow__price">₦8,500</b></div>
@@ -157,8 +163,9 @@
           <div class="mrow"><span class="mrow__name">Soda</span><b class="mrow__price">₦2,000</b></div>
           <div class="mrow"><span class="mrow__name">Water</span><b class="mrow__price">₦1,000</b></div>
         </div>
+      </div>
 
-        <h3 class="mt">Bottles &amp; Extras</h3>
+      <div class="tabpanel" data-panel="bottles" role="tabpanel" hidden>
         <div class="mgrid">
           <div class="mrow"><span class="mrow__name">Prosecco</span><b class="mrow__price">₦50,000</b></div>
           <div class="mrow"><span class="mrow__name">Moët</span><b class="mrow__price">₦200,000</b></div>
